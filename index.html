@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مكتبة أروى بنت عبد المطلب الثانوية الأولى</title>
+  <style>
+    :root{
+      --beige:#F6F1EB;
+      --blue:#A9D6E5;
+      --accent:#7FB7C8;
+      --text:#2B2B2B;
+      --card:#FFFFFF;
+      --glass: rgba(255,255,255,0.7);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Segoe UI',Tahoma,Arial,'Noto Naskh Arabic',sans-serif;background:var(--beige);color:var(--text);}
+    header{background:linear-gradient(90deg,var(--blue),var(--beige));padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:50;backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:64px;height:64px;object-fit:contain;border-radius:8px;background:var(--card);padding:6px}
+    .brand h1{margin:0;font-size:18px}
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:600}
+    nav a:hover,nav a.active{background:var(--glass)}
+    main{max-width:1000px;margin:28px auto;padding:0 18px}
+    section{padding:36px 18px;background:transparent;border-radius:12px;margin-bottom:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(31,41,55,0.06)}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(0,0,0,0.06)}
+    footer{padding:18px 24px;text-align:center;color:#666}
+    .pdf-section{margin-top:20px}
+    .subject-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+    .subject-header img{width:40px;height:40px;object-fit:contain;border-radius:6px;background:#fff;border:1px solid rgba(0,0,0,0.05)}
+    .pdf-uploader{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+    .pdf-item{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="شعار المكتبة" />
+      <div>
+        <h1>مكتبة أروى بنت عبد المطلب الثانوية الأولى</h1>
+        <div style="font-size:13px;color:#444">مكان للإبداع والمعرفة يدعم المناهج المدرسية</div>
+      </div>
+    </div>
+    <nav id="nav">
+      <a href="#home" class="active">الرئيسية</a>
+      <a href="#about">عن المكتبة</a>
+      <a href="#support">دعم المناهج</a>
+      <a href="#gallery">معرض الكتب</a>
+      <a href="#interactive">الكتب التفاعلية</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="card">
+      <h2>مرحبًا بكنّ في مكتبة أروى بنت عبد المطلب</h2>
+      <p>مساحة آمنة ومشجعة للتعلّم، توفر مصادر متنوعة تدعم الطالبات والمعلمات في رحلة التعليم.</p>
+    </section>
+
+    <section id="about" class="card">
+      <h3>عن المكتبة</h3>
+      <p>تسعى مكتبتنا إلى خلق بيئة معرفية تساعد الطالبات على تطوير مهارات القراءة والبحث والتفكير النقدي من خلال مصادر مطبوعة ورقمية وأنشطة تفاعلية.</p>
+    </section>
+
+    <section id="support" class="card">
+      <h3>دعم المناهج الدراسية</h3>
+      <p>تسهم مكتبة أروى بنت عبد المطلب الثانوية الأولى في دعم المناهج الدراسية من خلال توفير مصادر معرفية متنوعة تساعد الطالبات والمعلمات على توسيع الفهم وتطبيق المفاهيم التعليمية بطرق عملية وشيقة.</p>
+    </section>
+
+    <section id="gallery" class="card">
+      <h3>معرض الكتب والصور</h3>
+      <div class="gallery">
+        <img src="placeholder-science.jpg" alt="صورة للكتب العلمية" />
+        <img src="placeholder-literature.jpg" alt="صورة للكتب الأدبية" />
+      </div>
+    </section>
+
+    <section id="interactive" class="card">
+      <h3>الكتب التفاعلية حسب المواد</h3>
+
+      <div class="pdf-section" id="science-section">
+        <div class="subject-header">
+          <img src="science-icon.png" alt="رمز المواد العلمية" />
+          <h4>المواد العلمية</h4>
+        </div>
+        <div class="pdf-uploader">
+          <input type="file" id="scienceInput" accept="application/pdf" />
+          <button class="btn" id="addScience">رفع كتاب علمي</button>
+          <div id="scienceList"></div>
+        </div>
+      </div>
+
+      <div class="pdf-section" id="humanities-section">
+        <div class="subject-header">
+          <img src="humanities-icon.png" alt="رمز المواد الإنسانية" />
+          <h4>المواد الإنسانية</h4>
+        </div>
+        <div class="pdf-uploader">
+          <input type="file" id="humanitiesInput" accept="application/pdf" />
+          <button class="btn" id="addHumanities">رفع كتاب إنساني</button>
+          <div id="humanitiesList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>تواصل معنا</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="الاسم" required />
+        <input type="email" placeholder="البريد الإلكتروني" required />
+        <textarea rows="4" placeholder="رسالتك" required></textarea>
+        <button class="btn" type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © جميع الحقوق محفوظة — مكتبة أروى بنت عبد المطلب الثانوية الأولى
+  </footer>
+
+  <script>
+    function setupPdfUploader(inputId, listId, btnId){
+      const input = document.getElementById(inputId);
+      const list = document.getElementById(listId);
+      const btn = document.getElementById(btnId);
+      let pdfs = [];
+
+      function render(){
+        list.innerHTML='';
+        if(pdfs.length===0){list.innerHTML='<div style="color:#777">لا توجد ملفات.</div>';return;}
+        pdfs.forEach((p,i)=>{
+          const div=document.createElement('div');
+          div.className='pdf-item';
+          div.innerHTML=`<span>${p.name}</span>`;
+          const tools=document.createElement('div');
+          const d1=document.createElement('a');d1.href=p.url;d1.download=p.name;d1.textContent='تحميل';d1.className='btn';
+          const d2=document.createElement('a');d2.href=p.url;d2.target='_blank';d2.textContent='معاينة';d2.className='btn ghost';
+          const del=document.createElement('button');del.textContent='حذف';del.className='btn ghost';del.onclick=()=>{pdfs.splice(i,1);render();};
+          tools.append(d1,d2,del);
+          div.appendChild(tools);
+          list.appendChild(div);
+        });
+      }
+
+      btn.onclick=()=>{
+        const file=input.files[0];
+        if(!file){alert('يرجى اختيار ملف PDF');return;}
+        const url=URL.createObjectURL(file);
+        pdfs.push({name:file.name,url});
+        input.value='';
+        render();
+      }
+    }
+
+    setupPdfUploader('scienceInput','scienceList','addScience');
+    setupPdfUploader('humanitiesInput','humanitiesList','addHumanities');
+  </script>
+</body>
+</html>
